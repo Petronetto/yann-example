@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Ionic!</h2>
+  <ion-grid>
+    <ion-row *ngFor="let medal of medalGroup">
+      <ion-col width-25 *ngFor="let m of medal">
+        <img [src]="m.icon">
+        <p [innerText]="m.name"></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
